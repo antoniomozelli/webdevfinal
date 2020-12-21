@@ -1,0 +1,432 @@
+/* Note there a few "reset" styles given in reset.css. Review those before you begin */
+
+
+/*-----Global-------*/
+html {
+	--primary-col: #343434;    
+	--primary-alt:  #F1F6F9;    
+	--primary-on: #14274E;     
+	--secondary-col: #394867;
+    --secondary-on: #ffffff;
+    --secondary-alt:#9BA4B4;
+
+    --pad-and-gap:1em;
+}
+
+body{
+    color: var(--primary-col);
+    margin: 0;
+    padding: 0;
+    font-family:  'Roboto', sans-serif;  
+    background-color: var(--primary-alt);
+    line-height: 20px;
+}
+
+a{
+    color: var(--primary-alt);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+h1{
+    font-size: 25px;
+    line-height: 1;
+}
+
+h2{
+    font-size: 15px;
+}
+
+label{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+p{
+    font-size: 12px;
+    color: var(--primary-on);
+}
+
+
+h1 , h2{
+    margin: 0;
+}
+
+.content-wrap{
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/*------page Header-------*/
+
+.logo-img{
+    width: 150px;
+    height: 63px;
+}
+
+.grid-header{
+    display: grid;
+    width: 800px;
+    grid-row: 1fr 1fr 1fr;
+}
+
+.search-container{
+    order: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.logo-container{
+    order: 2;
+}
+.navigation-container{
+    order: 3;
+    align-items: center;
+}
+
+.page-header{
+    background: var(--primary-on);
+    text-align: center;
+}
+
+.menu li{
+    display: inline;
+    margin: 0 30px 30px 0;  
+}
+
+.menu ul{
+    margin: 0;
+}
+
+.flex-container{
+    display: flex;
+}
+
+
+
+/*------- Search for a product------------*/
+
+
+.search{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.inputimg{
+    position: relative;
+}
+
+.search input[type=search]{
+    color: var(--primary-alt);
+    background-color:var(--secondary-col);
+    border: none;
+    height: 30px;
+    width: 100%;
+    padding: 10px;
+}
+
+.search button{
+    height: 30px;
+    color: var(--primary-alt);
+    background-color: var(--secondary-col);
+    border: none;
+    position: absolute;
+    z-index: 2;
+}
+
+
+/*------ Aditional Links -----------*/
+.product img{
+    width: 100px;
+    height: 100px;
+}
+
+.your-products li{
+    display: inline;
+    margin-left: 10px;
+    
+}
+
+.material-icons{
+    color:var(--primary-alt);
+    display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+/*------- Filtering producr form --------*/
+.filters-container{
+    background-color: white;
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+.heading{
+    color: var(--primary-on);
+    text-align: center;
+}
+
+#stars{
+    color: var(--primary-on);
+}
+
+.grid{
+    display: grid;
+    justify-items: center; 
+    width: 100%;
+}
+
+.filter-list label{
+    font-size: px
+}
+
+.filter-options{
+    display: flex;
+}
+
+.filter-options ul{
+    margin: 0;
+    padding: 0;
+}
+
+.filter-options li{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset{
+    border: none;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+  .check_box {
+    display:none;
+}
+
+.check_box + label{
+    background:url('../img/check2.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 5px;
+}
+
+.check_box:checked + label{
+    background:url('../img/check1.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    
+}
+
+.check_box_cam {
+    display:none;
+}
+
+.check_box_cam + label{
+    background:url('../img/camera2.png') no-repeat;
+    height: 18px;
+    width: 17px;
+    display:inline-block;
+    padding: 0;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 2px;
+}
+
+.check_box_cam:checked + label{
+    background:url('../img/camera1.png') no-repeat;
+    height: 18px;
+    width: 17px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    
+}
+
+
+/*------- Products ---------*/
+
+.results-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+
+.product{
+    color: var(--primary-on);
+    background-color:white;
+    padding: 10px 10px 20px 10px;
+    border-radius: 15px;
+    box-shadow:1px 1px 1px  rgb(218, 218, 218);
+    width: 260px;
+    
+}
+
+.subheading{
+    margin-bottom: 10px;
+}
+
+.product img{
+    width: auto;
+}
+
+.product header{
+    text-align: center;
+}
+
+.product h3{
+    font-size: 15px;
+    margin: 10px 0 10px 0;
+}
+
+.product data{
+    font-size: 20px;
+}
+
+.product li{
+    display: inline;
+}
+.product fieldset{
+    width: 100%;
+    padding: 0;
+    margin: 20px 0 20px 0;
+    
+}
+
+.product ul, dd{
+    margin: 0;
+    padding: 0;
+}
+
+.product dt{
+    margin: 10px 0 5px 0;
+}
+
+.seemore{
+    display: block;
+    background-color: var(--secondary-alt);
+    padding: 5px;
+    width: 100%;
+}
+
+form{
+    text-align: center;
+}
+
+.product footer{
+    text-align: center;
+}
+.addbutton{
+    
+    background-color: var(--primary-on);
+    color: var(--primary-alt);
+    border: none;
+    padding: 5px;
+    width: 80%;
+        
+}
+
+.favoritebtn{
+    border: none;
+    background-color:var(--secondary-on);
+}
+
+
+
+/*-------- Pagination ---------*/
+
+.pagination li{
+    display: inline;
+    
+}
+
+.pagination a{
+    color: var(--primary-on);
+}
+
+/*-------- Footer ----------*/
+.page-footer{
+    background: var(--secondary-alt);
+    color: var(--primary-alt);
+    text-align: center;
+}
+
+.page-footer li{
+    display: inline;
+}
+
+.page-footer a{
+    margin: 0 10px 0 10px;
+}
+
+.social img{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+@media (max-width:800px){
+
+    .content-wrap{
+       width: auto;
+    }
+    .page-header{
+        margin: auto;
+    }
+
+    .grid-header{
+        width: auto;
+    }
+
+    .your-products{
+        margin-right: 20px;
+    }
+
+    .results{
+        justify-self: center;
+    }
+
+    .filters-container{
+        justify-self: stretch;
+    }
+
+    .filter-options fieldset{
+        display: inline;
+    }
+
+    .results-grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        width: 100%;
+        justify-self: stretch;
+    }
+    .filter-options {
+        display: inline-block;
+    }
+}
+
+@media (max-width:531px){
+    .results-grid{
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        width: 100%;
+        justify-self: stretch;
+    }
+}
